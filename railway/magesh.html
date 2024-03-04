@@ -1,0 +1,27 @@
+<html>
+ <head>
+   <title>SCROLLING TEXT </title>
+	<script language="javascript" >
+		var id;
+		var msg="Ravathi madam ";
+		function scroll()
+		{
+			var lchar;
+			lchar=msg.substring(0,1);
+			msg+=lchar;
+			msg=msg.substring(1,msg.length);
+			document.javaform.display.value=msg.substring(0,55);
+			window.status=msg.substring(0,55);
+			id=setTimeout("scroll()",100);
+		}
+	</script>
+</head>
+<body onload="scroll()">	
+	<center>
+		<form name="javaform">
+		<h1>SCROLLING TEXT IN TEXTBOX</h1>
+		<input type="text" name="display">
+		</form>
+	</center>
+</body>
+</html>
